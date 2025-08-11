@@ -1,0 +1,21 @@
+<div class="user-details">
+  <h1>Blog Posts</h1>
+</div>
+<div id="medium-posts"></div>
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gonzo-hacks')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('medium-posts');
+    let html = '';
+    data.items.forEach(item => {
+      const title = item.title;
+      const link = item.link;
+      const pubDate = new Date(item.pubDate).toLocaleDateString();
+      const excerpt = item.contentSnippet.substring(0, 140) + '...';
+      html += `<article class="blog-post"><h3>${title}</h3><small>${pubDate}</small><p>${excerpt}</p><a href="${link}" target="_blank">Read More</a></article>`;
+    });
+    container.innerHTML = html;
+  })
+  .catch(err => console.error('Error fetching Medium posts:', err));
+</script>
