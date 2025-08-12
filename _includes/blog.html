@@ -1,21 +1,7 @@
 <div class="user-details">
   <h1>Blog Posts</h1>
 </div>
-<div id="medium-posts"></div>
-<script>
-fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gonzo-hacks')
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('medium-posts');
-    let html = '';
-    data.items.forEach(item => {
-      const title = item.title;
-      const link = item.link;
-      const pubDate = new Date(item.pubDate).toLocaleDateString();
-      const excerpt = item.contentSnippet.substring(0, 140) + '...';
-      html += `<article class="blog-post"><h3>${title}</h3><small>${pubDate}</small><p>${excerpt}</p><a href="${link}" target="_blank">Read More</a></article>`;
-    });
-    container.innerHTML = html;
-  })
-  .catch(err => console.error('Error fetching Medium posts:', err));
-</script>
+<div class="blog-links">
+  <a href="https://medium.com/@gonzo-hacks/the-fast-and-the-curious-finding-a-race-condition-in-worldcoin-621c89bfbd61" target="_blank">The Fast and the Curious: Finding a Race Condition in Worldcoin</a>
+  <a href="https://medium.com/@gonzo-hacks/pat-tastrophe-how-we-hacked-virtuals-4-6b-agentic-ai-cryptocurrency-ecosystem-f850b544d0f5" target="_blank">Pat-tastrophe: How We Hacked Virtuals' $4.6B Agentic AI Cryptocurrency Ecosystem</a>
+</div>
