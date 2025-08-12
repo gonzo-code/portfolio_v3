@@ -19,3 +19,21 @@
     }
   }
 }
+
+.press-mentions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.press-item img {
+  max-width: 60px;
+  height: auto;
+}
+
+.blog-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

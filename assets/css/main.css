@@ -10,3 +10,5 @@
 .footer-sections{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;}
 .footer-section{flex:1 1 250px;padding:0 1rem 1rem;}
 .footer-bottom{text-align:center;padding:1rem 0;border-top:1px solid #ddd;margin-top:2rem;}
+
+.press-mentions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;justify-items:center}.press-item img{max-width:60px;height:auto}.blog-links{display:flex;flex-direction:column;gap:10px}
