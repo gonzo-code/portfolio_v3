@@ -6,14 +6,25 @@
       </h1>
       <div class="header-icons">
         <a aria-label="Send email" href="mailto:me@danesherrets.com"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/dane-sherrets-7a049973/"><i class="icon fa fa-linkedin-square" aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="https://github.com/gonzo-code/"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+        <a aria-label="My Linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dane-sherrets-7a049973/"><i class="icon fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a aria-label="X (Twitter) – @danesherrets" target="_blank" rel="noopener noreferrer" href="https://x.com/danesherrets">
+          {% include icons/x.svg %}
+        </a>
       </div>
       <div class="header-links">
-        <a class="link" href="#press" data-scroll>Press</a>
-        <a class="link" href="#blog" data-scroll>Blog</a>
-        <a class="link" href="#talks" data-scroll>Talks</a>
+        <a class="pill" href="#press-mentions" data-scroll>
+          <span class="pill-icon">{% include icons/newspaper.svg %}</span>
+          <span class="pill-label">Press</span>
+        </a>
+        <a class="pill" href="#blog-posts" data-scroll>
+          <span class="pill-icon">{% include icons/pen.svg %}</span>
+          <span class="pill-label">Blog</span>
+        </a>
+        <a class="pill" href="#conference-talks" data-scroll>
+          <span class="pill-icon">{% include icons/mic.svg %}</span>
+          <span class="pill-label">Talks</span>
+        </a>
       </div>
   </div>
-  <a class="down" href="#press" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+  <a class="down" href="#press-mentions" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>
