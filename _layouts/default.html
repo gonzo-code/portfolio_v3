@@ -5,17 +5,21 @@
       {% include header.html %}
       {{ content }}
       <footer class="site-footer">
-        <div class="footer-sections">
-          <section id="press" class="footer-section">
+        <section id="press" class="content-section">
+          <div class="section-container">
             {% include press.html %}
-          </section>
-          <section id="blog" class="footer-section">
+          </div>
+        </section>
+        <section id="blog" class="content-section">
+          <div class="section-container">
             {% include blog.html %}
-          </section>
-          <section id="talks" class="footer-section">
+          </div>
+        </section>
+        <section id="talks" class="content-section">
+          <div class="section-container">
             {% include talks.html %}
-          </section>
-        </div>
+          </div>
+        </section>
         {% include footer.html %}
       </footer>
   </body>
